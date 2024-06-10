@@ -10,20 +10,26 @@ import Foundation
 /// Provides network layer access to use and fetch movies data
 /// NOTE: This is an shared class singleton, so init won't be available.
 /// Example:
-/// * Fetch Trending Movies
+/// * Fetch movies data
 /// ```
-/// NetworkManager.shared.get.trendingMovies
+/// NetworkManager.shared.fetchData(url:completion:)
 /// ```
-public class NetworkManager: NetworkManagerProtocol {
+public class NetworkManager: NetworkManagerAPI {
 
     // MARK: - Properties
 
     public static let shared: NetworkManager = NetworkManager()
-    public let get: NetworkingGetRequestAPI
+    private let networkManagerAPIImpl: NetworkManagerAPIImpl
 
     // MARK: - Init
 
     private init() {
-        get = NetworkingGetRequestAPIImpl(urlSession: NetworkingSession.session)
+        networkManagerAPIImpl = NetworkManagerAPIImpl(urlSession: NetworkingSession.session)
+    }
+
+    // MARK: - API's
+
+    public func fetchData<T>(from url: URL, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
+        networkManagerAPIImpl.fetchData(from: url, completion: completion)
     }
 }

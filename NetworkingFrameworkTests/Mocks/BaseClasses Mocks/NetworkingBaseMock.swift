@@ -10,12 +10,12 @@ import Foundation
 
 /// Mock for `NetworkManager` class which provides api's to fetch, delete, update and post data using mock data
 /// Use `NetworkServiceMock.shared.get` to use this class in `Testing` environment only.
-class NetworkManagerMock: NetworkManagerProtocol {
+class NetworkManagerMock: NetworkManagerAPI {
 
     // MARK: - Properties
 
     static let shared = NetworkManagerMock()
-    var get: NetworkingGetRequestAPI
+    private let networkManagerAPIImpl: NetworkManagerAPIImpl
 
     // MARK: - Init
 
@@ -23,6 +23,12 @@ class NetworkManagerMock: NetworkManagerProtocol {
         let configuration = URLSessionConfiguration.default
         configuration.protocolClasses = [MockURLProtocol.self]
         let urlSession = URLSession.init(configuration: configuration)
-        self.get = NetworkingGetRequestAPIImpl(urlSession: urlSession)
+        networkManagerAPIImpl = NetworkManagerAPIImpl(urlSession: urlSession)
+    }
+
+    // MARK: - APIs
+
+    func fetchData<T>(from url: URL, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
+        networkManagerAPIImpl.fetchData(from: url, completion: completion)
     }
 }

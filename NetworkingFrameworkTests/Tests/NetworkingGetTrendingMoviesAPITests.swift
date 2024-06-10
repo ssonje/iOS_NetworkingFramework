@@ -15,9 +15,9 @@ class NetworkingGetTrendingMoviesAPITests: XCTestCase {
     // MARK: - Properties
 
     let networkManagerMock = NetworkManagerMock.shared
-    let trendingMoviesURL = NetworkingAPIConstants.baseURL.rawValue
+    let trendingMoviesURL = URL(string: NetworkingAPIConstants.baseURL.rawValue
         + NetworkingAPIConstants.trendingMovies.rawValue
-        + NetworkingAPIConstants.apiKey.rawValue
+        + NetworkingAPIConstants.apiKey.rawValue)
 
     // MARK: - Lifecycle
 
@@ -25,7 +25,7 @@ class NetworkingGetTrendingMoviesAPITests: XCTestCase {
         try super.setUpWithError()
 
         let data = MoviesMock.mockTrendingMoviesData
-        let trendingMoviesURL = try XCTUnwrap(URL(string: trendingMoviesURL))
+        let trendingMoviesURL = try XCTUnwrap(trendingMoviesURL)
 
         MockURLProtocol.requestHandler = { request in
             guard let url = request.url, url == trendingMoviesURL else {
@@ -41,7 +41,8 @@ class NetworkingGetTrendingMoviesAPITests: XCTestCase {
 
     func testGetTrendingMoviesAPI() throws {
         let expectation = XCTestExpectation(description: "Trending movies data fetching expectation.")
-        networkManagerMock.get.trendingMovies(completion: { (result: Result<TrendingMovies, Error>) in
+        let trendingMoviesURL = try XCTUnwrap(trendingMoviesURL)
+        networkManagerMock.fetchData(from: trendingMoviesURL, completion: { (result: Result<TrendingMovies, Error>) in
             switch result {
             case .success(let movies):
                 do {

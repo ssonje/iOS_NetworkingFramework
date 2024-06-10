@@ -21,11 +21,10 @@
 		9A2A000C2C12050900353D1D /* NetworkingGetTrendingMoviesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A00002C12050900353D1D /* NetworkingGetTrendingMoviesAPITests.swift */; };
 		9A2A001F2C12051200353D1D /* NetworkingFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A000D2C12051200353D1D /* NetworkingFramework.docc */; };
 		9A2A00202C12051200353D1D /* NetworkingAPIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A000F2C12051200353D1D /* NetworkingAPIConstants.swift */; };
-		9A2A00212C12051200353D1D /* NetworkingGetRequestAPIImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A00112C12051200353D1D /* NetworkingGetRequestAPIImpl.swift */; };
+		9A2A00212C12051200353D1D /* NetworkManagerAPIImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A00112C12051200353D1D /* NetworkManagerAPIImpl.swift */; };
 		9A2A00222C12051200353D1D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A00132C12051200353D1D /* NetworkManager.swift */; };
 		9A2A00232C12051200353D1D /* NetworkingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A00142C12051200353D1D /* NetworkingSession.swift */; };
-		9A2A00242C12051200353D1D /* NetworkingGetRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A00162C12051200353D1D /* NetworkingGetRequestAPI.swift */; };
-		9A2A00252C12051200353D1D /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A00172C12051200353D1D /* NetworkManagerProtocol.swift */; };
+		9A2A00252C12051200353D1D /* NetworkManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A00172C12051200353D1D /* NetworkManagerAPI.swift */; };
 		9A2A00262C12051200353D1D /* MovieCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A00192C12051200353D1D /* MovieCast.swift */; };
 		9A2A00272C12051200353D1D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A001A2C12051200353D1D /* Movie.swift */; };
 		9A2A00282C12051200353D1D /* MovieGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A001B2C12051200353D1D /* MovieGenre.swift */; };
@@ -52,11 +51,10 @@
 		9A2A00002C12050900353D1D /* NetworkingGetTrendingMoviesAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingGetTrendingMoviesAPITests.swift; sourceTree = "<group>"; };
 		9A2A000D2C12051200353D1D /* NetworkingFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = NetworkingFramework.docc; sourceTree = "<group>"; };
 		9A2A000F2C12051200353D1D /* NetworkingAPIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingAPIConstants.swift; sourceTree = "<group>"; };
-		9A2A00112C12051200353D1D /* NetworkingGetRequestAPIImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingGetRequestAPIImpl.swift; sourceTree = "<group>"; };
+		9A2A00112C12051200353D1D /* NetworkManagerAPIImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerAPIImpl.swift; sourceTree = "<group>"; };
 		9A2A00132C12051200353D1D /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9A2A00142C12051200353D1D /* NetworkingSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingSession.swift; sourceTree = "<group>"; };
-		9A2A00162C12051200353D1D /* NetworkingGetRequestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingGetRequestAPI.swift; sourceTree = "<group>"; };
-		9A2A00172C12051200353D1D /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		9A2A00172C12051200353D1D /* NetworkManagerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerAPI.swift; sourceTree = "<group>"; };
 		9A2A00192C12051200353D1D /* MovieCast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCast.swift; sourceTree = "<group>"; };
 		9A2A001A2C12051200353D1D /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		9A2A001B2C12051200353D1D /* MovieGenre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieGenre.swift; sourceTree = "<group>"; };
@@ -111,7 +109,7 @@
 		9A2A00102C12051200353D1D /* NetworkingAPIImpl */ = {
 			isa = PBXGroup;
 			children = (
-				9A2A00112C12051200353D1D /* NetworkingGetRequestAPIImpl.swift */,
+				9A2A00112C12051200353D1D /* NetworkManagerAPIImpl.swift */,
 			);
 			path = NetworkingAPIImpl;
 			sourceTree = "<group>";
@@ -128,8 +126,7 @@
 		9A2A00152C12051200353D1D /* NetworkingAPI */ = {
 			isa = PBXGroup;
 			children = (
-				9A2A00162C12051200353D1D /* NetworkingGetRequestAPI.swift */,
-				9A2A00172C12051200353D1D /* NetworkManagerProtocol.swift */,
+				9A2A00172C12051200353D1D /* NetworkManagerAPI.swift */,
 			);
 			path = NetworkingAPI;
 			sourceTree = "<group>";
@@ -348,7 +345,6 @@
 				9A2A00282C12051200353D1D /* MovieGenre.swift in Sources */,
 				9A2A00292C12051200353D1D /* TrendingMovies.swift in Sources */,
 				9A2A00202C12051200353D1D /* NetworkingAPIConstants.swift in Sources */,
-				9A2A00242C12051200353D1D /* NetworkingGetRequestAPI.swift in Sources */,
 				9A2A002A2C12051200353D1D /* MovieCredit.swift in Sources */,
 				9A2A002B2C12051200353D1D /* MovieCrew.swift in Sources */,
 				9A2AFFDC2C12044500353D1D /* NetworkingFramework.docc in Sources */,
@@ -357,8 +353,8 @@
 				9A2A00232C12051200353D1D /* NetworkingSession.swift in Sources */,
 				9A2A00222C12051200353D1D /* NetworkManager.swift in Sources */,
 				9A2A001F2C12051200353D1D /* NetworkingFramework.docc in Sources */,
-				9A2A00252C12051200353D1D /* NetworkManagerProtocol.swift in Sources */,
-				9A2A00212C12051200353D1D /* NetworkingGetRequestAPIImpl.swift in Sources */,
+				9A2A00252C12051200353D1D /* NetworkManagerAPI.swift in Sources */,
+				9A2A00212C12051200353D1D /* NetworkManagerAPIImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

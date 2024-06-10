@@ -95,141 +95,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "NetworkingGetRequestAPI",
-        "printedName": "NetworkingGetRequestAPI",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "trendingMovies",
-            "printedName": "trendingMovies(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Result<τ_1_0, Swift.Error>) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Result",
-                    "printedName": "Swift.Result<τ_1_0, Swift.Error>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "GenericTypeParam",
-                        "printedName": "τ_1_0"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Error",
-                        "printedName": "Swift.Error",
-                        "usr": "s:s5ErrorP"
-                      }
-                    ],
-                    "usr": "s:s6ResultO"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:19NetworkingFramework0A13GetRequestAPIP14trendingMovies10completionyys6ResultOyqd__s5Error_pGc_tSeRd__lF",
-            "mangledName": "$s19NetworkingFramework0A13GetRequestAPIP14trendingMovies10completionyys6ResultOyqd__s5Error_pGc_tSeRd__lF",
-            "moduleName": "NetworkingFramework",
-            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : NetworkingFramework.NetworkingGetRequestAPI, τ_1_0 : Swift.Decodable>",
-            "sugared_genericSig": "<Self, T where Self : NetworkingFramework.NetworkingGetRequestAPI, T : Swift.Decodable>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "popularMovies",
-            "printedName": "popularMovies(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Result<τ_1_0, Swift.Error>) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Result",
-                    "printedName": "Swift.Result<τ_1_0, Swift.Error>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "GenericTypeParam",
-                        "printedName": "τ_1_0"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Error",
-                        "printedName": "Swift.Error",
-                        "usr": "s:s5ErrorP"
-                      }
-                    ],
-                    "usr": "s:s6ResultO"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:19NetworkingFramework0A13GetRequestAPIP13popularMovies10completionyys6ResultOyqd__s5Error_pGc_tSeRd__lF",
-            "mangledName": "$s19NetworkingFramework0A13GetRequestAPIP13popularMovies10completionyys6ResultOyqd__s5Error_pGc_tSeRd__lF",
-            "moduleName": "NetworkingFramework",
-            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : NetworkingFramework.NetworkingGetRequestAPI, τ_1_0 : Swift.Decodable>",
-            "sugared_genericSig": "<Self, T where Self : NetworkingFramework.NetworkingGetRequestAPI, T : Swift.Decodable>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:19NetworkingFramework0A13GetRequestAPIP",
-        "mangledName": "$s19NetworkingFramework0A13GetRequestAPIP",
-        "moduleName": "NetworkingFramework",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "NetworkingFramework",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -337,52 +202,64 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "get",
-            "printedName": "get",
+            "kind": "Function",
+            "name": "fetchData",
+            "printedName": "fetchData(from:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "NetworkingGetRequestAPI",
-                "printedName": "NetworkingFramework.NetworkingGetRequestAPI",
-                "usr": "s:19NetworkingFramework0A13GetRequestAPIP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:19NetworkingFramework14NetworkManagerC3getAA0A13GetRequestAPI_pvp",
-            "mangledName": "$s19NetworkingFramework14NetworkManagerC3getAA0A13GetRequestAPI_pvp",
-            "moduleName": "NetworkingFramework",
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
+                "name": "Void",
+                "printedName": "()"
+              },
               {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<τ_0_0, Swift.Error>) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "NetworkingGetRequestAPI",
-                    "printedName": "NetworkingFramework.NetworkingGetRequestAPI",
-                    "usr": "s:19NetworkingFramework0A13GetRequestAPIP"
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<τ_0_0, Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
                   }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:19NetworkingFramework14NetworkManagerC3getAA0A13GetRequestAPI_pvg",
-                "mangledName": "$s19NetworkingFramework14NetworkManagerC3getAA0A13GetRequestAPI_pvg",
-                "moduleName": "NetworkingFramework",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
+                ]
               }
-            ]
+            ],
+            "declKind": "Func",
+            "usr": "s:19NetworkingFramework14NetworkManagerC9fetchData4from10completiony10Foundation3URLV_ys6ResultOyxs5Error_pGctSeRzlF",
+            "mangledName": "$s19NetworkingFramework14NetworkManagerC9fetchData4from10completiony10Foundation3URLV_ys6ResultOyxs5Error_pGctSeRzlF",
+            "moduleName": "NetworkingFramework",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -777,51 +654,44 @@
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkingGetRequestAPIImpl.swift",
+      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkManagerAPIImpl.swift",
       "kind": "StringLiteral",
-      "offset": 1865,
-      "length": 52,
-      "value": "\"[NetworkingGetRequestAPIImpl] Found `postsURL` nil\""
-    },
-    {
-      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkingGetRequestAPIImpl.swift",
-      "kind": "StringLiteral",
-      "offset": 2139,
+      "offset": 762,
       "length": 107,
       "value": "\"[NetworkingGetRequestAPIImpl] Unfortunately, get request failed with error: \""
     },
     {
-      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkingGetRequestAPIImpl.swift",
+      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkManagerAPIImpl.swift",
       "kind": "StringLiteral",
-      "offset": 2245,
+      "offset": 868,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkingGetRequestAPIImpl.swift",
+      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkManagerAPIImpl.swift",
       "kind": "StringLiteral",
-      "offset": 2405,
+      "offset": 1028,
       "length": 120,
       "value": "\"[NetworkingGetRequestAPIImpl] Get nil response from the server. Hence, Unable to parse the response as HTTPURLResponse\""
     },
     {
-      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkingGetRequestAPIImpl.swift",
+      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkManagerAPIImpl.swift",
       "kind": "StringLiteral",
-      "offset": 2621,
+      "offset": 1244,
       "length": 61,
       "value": "\"[NetworkingGetRequestAPIImpl] Get nil data from the server.\""
     },
     {
-      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkingGetRequestAPIImpl.swift",
+      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkManagerAPIImpl.swift",
       "kind": "StringLiteral",
-      "offset": 3016,
+      "offset": 1639,
       "length": 58,
       "value": "\"[NetworkingGetRequestAPIImpl] Data fetched successfully.\""
     },
     {
-      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkingGetRequestAPIImpl.swift",
+      "filePath": "\/Users\/team-rsl\/Desktop\/Com\/4\/NetworkingFramework\/NetworkingFramework\/NetworkingAPIImpl\/NetworkManagerAPIImpl.swift",
       "kind": "StringLiteral",
-      "offset": 3138,
+      "offset": 1761,
       "length": 58,
       "value": "\"[NetworkingGetRequestAPIImpl] Failed to decode the data.\""
     }

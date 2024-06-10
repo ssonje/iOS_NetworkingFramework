@@ -11,12 +11,8 @@ import _SwiftConcurrencyShims
 public struct TrendingMovies : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
-public protocol NetworkingGetRequestAPI {
-  func trendingMovies<T>(completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
-  func popularMovies<T>(completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
-}
 @_hasMissingDesignatedInitializers public class NetworkManager {
   public static let shared: NetworkingFramework.NetworkManager
-  final public let get: any NetworkingFramework.NetworkingGetRequestAPI
+  public func fetchData<T>(from url: Foundation.URL, completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
   @objc deinit
 }
