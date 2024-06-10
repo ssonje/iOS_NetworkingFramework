@@ -1,0 +1,22 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios17.0-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name NetworkingFramework
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+@_exported import NetworkingFramework
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct TrendingMovies : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol NetworkingGetRequestAPI {
+  func trendingMovies<T>(completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
+  func popularMovies<T>(completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
+}
+@_hasMissingDesignatedInitializers public class NetworkManager {
+  public static let shared: NetworkingFramework.NetworkManager
+  final public let get: any NetworkingFramework.NetworkingGetRequestAPI
+  @objc deinit
+}
